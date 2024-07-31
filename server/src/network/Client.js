@@ -43,7 +43,7 @@ class Client {
     if (message.isPing) {
       this.send({ isPong: true, tps: this.game.tps });
     } else if (message.token) {
-      // console.log('Client', this.id, 'authenticated with token');
+      console.log('Client', this.id, 'authenticated with token');
       this.token = message.token;
       this.getAccount();
     } else {
